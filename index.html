@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pine Agri A4 Form</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="form-wrapper" id="formArea">
+
+<img src="form-bg.jpg" class="form-bg">
+
+<input type="text" placeholder="Enter vehicle number" class="input vehicle">
+
+<input type="date" class="input date">
+
+<textarea placeholder="Enter address" class="input address"></textarea>
+
+<input type="text" placeholder="Enter ton's rent" class="input rent">
+
+<input type="text" placeholder="Enter ton's guarantee" class="input guarantee">
+
+<input type="number" placeholder="Enter advance paid " class="input advance ">
+<input type="number" placeholder="Enter amount payable" class="input amount">
+<input type="number" placeholder="Enter tip offered" class="input tip ">
+<input type="date" placeholder="Enter date" class="input date1">
+<input type="day" placeholder="Enter day" class="input day ">
+<input type="time" placeholder="Enter time" class="input time">
+<input type="number" placeholder="Enter net weight " class="input weight ">
+<input type="number" placeholder="Enter total count" class="input count ">
+<input type="text" placeholder="Enter total payable" class="input total">
+
+</div>
+<div class="button-wrapper">
+
+    <button onclick="downloadPDF()" class="btn-primary">Submit & Download PDF</button>
+</div>
+
+
+<script>
+
+const canvas = document.getElementById('signature');
+const signaturePad = new SignaturePad(canvas);
+
+async function generatePDF() {
+const { jsPDF } = window.jspdf;
+
+const element = document.getElementById("a4");
+
+const canvasImg = await html2canvas(element, { scale: 2 });
+const imgData = canvasImg.toDataURL("image/jpeg", 1.0);
+
+const pdf = new jsPDF('p', 'mm', 'a4');
+pdf.addImage(imgData, 'JPEG', 0, 0, 210, 297);
+pdf.save("PineAgriForm.pdf");
+}
+</script>
+
+
+<script>
+async function downloadPDF() {
+
+const { jsPDF } = window.jspdf;
+
+const element = document.getElementById("formArea");
+
+const canvas = await html2canvas(element, {
+scale: 2
+});
+
+const imgData = canvas.toDataURL("image/png");
+
+const pdf = new jsPDF({
+orientation: "portrait",
+unit: "mm",
+format: "a4"
+});
+
+const pageWidth = 210;
+const pageHeight = 297;
+
+pdf.addImage(imgData, "PNG", 0, 0, pageWidth, pageHeight);
+pdf.save("Pine_Agri_Form.pdf");
+}
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const inputs = Array.from(
+document.querySelectorAll("input, select, textarea")
+).filter(el => !el.disabled && el.type !== "hidden");
+
+inputs.forEach((input, index) => {
+input.addEventListener("keydown", function (e) {
+if (e.key === "Enter") {
+e.preventDefault(); // stop form submit
+
+const nextInput = inputs[index + 1];
+if (nextInput) {
+nextInput.focus();
+}
+}
+});
+});
+});
+</script>
+if (nextInput) {
+nextInput.focus();
+} else {
+document.querySelector("form").submit();
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</body>
+</html>

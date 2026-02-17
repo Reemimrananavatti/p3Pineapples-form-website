@@ -1,0 +1,188 @@
+.form-wrapper{
+position:relative;
+display:inline-block; /* keeps natural size */
+}
+
+.form-bg{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* COMMON INPUT STYLE */
+.input{
+position:absolute;
+border:none;
+outline:none;
+background:transparent;
+font-size:35px;
+color: black;
+font-style: normal;
+}
+.vehicle{
+top:23%;
+left:32%;
+width:55%;
+}
+
+.date{
+top:23%;
+left:79%;
+width:18%;
+}
+
+.address{
+top:31%;
+left:22%;
+width:72%;
+height:8%;
+}
+
+.rent{
+top:45%;
+left:34%;
+width:40%;
+}
+
+.guarantee{
+top:49%;
+left:40%;
+width:40%;
+}
+
+.advance{
+top:55%;
+left:35%;
+width:40%;
+}
+
+.amount{
+top:60%;
+left:35%;
+width:40%;
+}
+
+.tip{
+top:68%;
+left:36%;
+width:40%;
+}
+
+.date1{
+top:78%;
+left:20%;
+width:40%;
+}
+
+.day{
+top:82%;
+left:20%;
+width:40%;
+}
+
+.time{
+top:86%;
+left:20%;
+width:40%;
+}
+
+.weight{
+top:73%;
+left:73%;
+width:40%;
+}
+.count{
+top:78%;
+left:73%;
+width:40%;
+}
+.total{
+top:83%;
+left:73%;
+width:40%;
+}
+
+
+input,
+textarea {
+width: 100%;
+border: none;
+outline: none;
+background: transparent;
+
+font-size: 16px;
+font-family: inherit;
+
+/* 🔴 FIXES CUTTING */
+line-height: 1.4;
+padding: 10px 12px;
+box-sizing: border-box;
+
+display: flex;
+align-items: center;
+}
+
+
+
+
+
+
+.field-box {
+position: relative;
+height: 48px; /* keep fixed height */
+display: flex;
+align-items: center; /* vertical center */
+}
+
+
+
+
+
+.field-box {
+overflow: visible;
+}
+
+.btn-primary {
+background: linear-gradient(135deg, #0f766e, #115e59);
+color: #fff;
+border: none;
+padding: 12px 26px;
+font-size: 16px;
+font-weight: 600;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.25s ease;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.btn-primary:active {
+transform: translateY(0);
+box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+body {
+margin: 0;
+padding: 10px;
+}
+
+.container {
+max-width: 900px;
+margin: auto;
+}
+
+input, select, textarea {
+width: 100%;
+box-sizing: border-box;
+font-size: 16px; /* prevents zoom on iPhone */
+}
