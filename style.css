@@ -4,20 +4,17 @@
 body{
 margin:0;
 padding:0;
-box-sizing:border-box;
 font-family: Arial, Helvetica, sans-serif;
-display:flex;
-flex-direction:column;
-align-items:center;
+display:block;
 background:#f2f2f2;
 }
 
 .form-wrapper{
 position:relative;
 width:100%;
-max-width:794px;
-aspect-ratio:210 / 297;
+height: 1123px;
 background:#fff;
+margin: 0 auto;
 overflow:hidden;
 }
 
@@ -350,3 +347,13 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
+
+
+@media (max-width: 794px){
+    .form-wrapper{
+        transform: scale(calc(100vw / 794));
+        transform-origin: top left;
+    }
+}
+
