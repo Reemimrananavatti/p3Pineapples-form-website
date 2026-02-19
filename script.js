@@ -213,7 +213,26 @@ return `${displayHour}:${minutes} ${ampm}`; // e.g., "02:05 PM"
 }
 
 
+const timeField = document.querySelector(".time");
 
+if(timeField){
+// Prevent invalid HH or MM
+timeField.addEventListener("input", function(){
+const val = this.value; // format "HH:MM"
+if(!val) return;
+
+let [h, m] = val.split(":").map(Number);
+
+// Clamp values
+if(h > 12) h = 12;
+if(h < 1) h = 1; // optional: avoid 0
+if(m > 59) m = 59;
+if(m < 0) m = 0;
+
+// Reformat back to HH:MM
+this.value = String(h).padStart(2,"0") + ":" + String(m).padStart(2,"0");
+});
+}
 
 
 /* ================= PDF GENERATION ================= */
@@ -393,6 +412,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
