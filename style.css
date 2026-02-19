@@ -19,7 +19,18 @@ max-width:794px;
 aspect-ratio:210 / 297;
 background:#fff;
 overflow:hidden;
+    height: 1123px;
+    transform-origin: top centre;
 }
+
+.form-scale{
+    width: 100%;
+    display: flex;
+    justify-content: centre;
+    overflow-x: auto;
+    padding: 10px 0 30px;
+}
+
 
 .form-bg{
 position:absolute;
@@ -350,3 +361,4 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
