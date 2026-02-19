@@ -10,7 +10,15 @@ display:flex;
 flex-direction:column;
 align-items:center;
 background:#f2f2f2;
+    height: auto;
+    overflow-y: auto;
 }
+
+html{
+    height: auto;
+    overflow-y: auto;
+}
+
 
 .form-wrapper{
 position:relative;
@@ -18,7 +26,8 @@ width:100%;
 max-width:794px;
 aspect-ratio:210 / 297;
 background:#fff;
-overflow:hidden;
+overflow:visible;
+
 }
 
 .form-bg{
@@ -307,9 +316,18 @@ white-space: pre-wrap;
 
 /* Responsive Form */
 @media (max-width: 600px) {
-.form-wrapper {
-max-width: 100%;
-aspect-ratio: auto;
+body{
+align-items: stretch;
+}
+
+.form-wrapper{
+height:auto;
+min-height:1200px; /* ensures full form visible */
+}
+
+.btn{
+position:relative;
+z-index:10;
 }
 .input {
 font-size: 18px; /* adjust if needed */
@@ -350,3 +368,4 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
