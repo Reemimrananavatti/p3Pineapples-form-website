@@ -21,11 +21,7 @@ background:#fff;
 overflow:hidden;
 }
 
-.form-height-fix{
-    width: 100%;
-    height:1123px;
-    pointer-events: none;
-}
+
 
 .form-bg{
 position:absolute;
@@ -356,6 +352,7 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
 
 
 
