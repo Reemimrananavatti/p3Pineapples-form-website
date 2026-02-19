@@ -10,7 +10,6 @@ display:flex;
 flex-direction:column;
 align-items:center;
 background:#f2f2f2;
-    height: auto;
     overflow-y: auto;
 }
 
@@ -24,7 +23,8 @@ html{
 position:relative;
 width:100%;
 max-width:794px;
-aspect-ratio:210 / 297;
+    height: auto;
+    min-height: 1123px;
 background:#fff;
 overflow:visible;
 
@@ -368,4 +368,5 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
 
