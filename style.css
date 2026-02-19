@@ -25,7 +25,7 @@ transform-origin: top center;
     width: 100%;
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     padding: 10px 0 30px;
 }
 
@@ -318,6 +318,7 @@ white-space: pre-wrap;
 @media (max-width: 820px) {
 .form-wrapper {
 transform: scale(calc(100vw/794));
+    width: calc(794px* {100vw/ 794));
 }
 
 
@@ -348,6 +349,7 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
 
 
 
