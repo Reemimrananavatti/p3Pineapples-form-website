@@ -414,6 +414,24 @@ window.location.href = "saved-addresses.html";
 }
 
 
+<script>
+function scaleForm() {
+const wrapper = document.querySelector(".form-wrapper");
+const screenWidth = window.innerWidth;
+const scale = screenWidth / 794;
+
+if (scale < 1) {
+wrapper.style.transform = "scale(" + scale + ")";
+} else {
+wrapper.style.transform = "scale(1)";
+}
+}
+
+window.addEventListener("load", scaleForm);
+window.addEventListener("resize", scaleForm);
+</script
+
+
 
 
 
