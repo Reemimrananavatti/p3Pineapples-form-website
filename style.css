@@ -24,7 +24,7 @@ transform-origin: top center;
     width: 100%;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 10px 0 30px;
 }
 
@@ -347,5 +347,6 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
 
 
