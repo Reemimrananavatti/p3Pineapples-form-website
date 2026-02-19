@@ -336,6 +336,7 @@ const fields = [
 const overlays = [];
 
 fields.forEach(f => {
+
 const field = document.querySelector(f.selector);
 if(!field) return;
 
@@ -343,35 +344,47 @@ const rect = field.getBoundingClientRect();
 const overlay = document.createElement("div");
 const offsets = customOffsets[f.selector] || {topOffset:0, leftOffset:0};
 
+let text = "";
 
-
-// Set text
-if(f.isDate) overlay.innerText = formatDate(field.value);
-else if(f.isTime) overlay.innerText = getTimeWithAMPM();
-else if(f.isMoney) overlay.innerText = formatMoney(field.value);
-else if(f.selector === ".tip") {
+// ===== VALUE LOGIC =====
+if(f.selector === "#address"){
+text = field.value || "";
+}
+else if(f.isDate){
+text = formatDate(field.value);
+}
+else if(f.isTime){
+text = getTimeWithAMPM();
+}
+else if(f.isMoney){
+text = formatMoney(field.value);
+}
+else if(f.selector === ".tip"){
 const value = field.value.trim();
+
 let formattedTip = "";
-if(value) {
-// If user typed a number, format it as currency
-if(/^\d+$/.test(value.replace(/[^\d]/g, ""))){
+
+if(value){
+if(/^\d+$/.test(value.replace(/[^\d]/g,""))){
 formattedTip = parseInt(value.replace(/[^\d]/g,""),10)
 .toLocaleString("en-IN") + "/- ";
-} else {
-formattedTip = value + " "; // in case they type text
+}else{
+formattedTip = value + " ";
 }
 }
-else overlay.innerText = field.value;
 
-
-// Always append the fixed line
-overlay.innerText = formattedTip + "Be on time with Expected Weight.";
+text = formattedTip + "Be on time with Expected Weight.";
+}
+else{
+text = field.value || "";
 }
 
-// Set styles
+// ===== STYLE =====
+overlay.innerText = text;
+
 overlay.style.position = "absolute";
 overlay.style.top = (rect.top - parentRect.top + offsets.topOffset) + "px";
-overlay.style.left = (rect.left - parentRect.left + offsets.topOffset) + "px";
+overlay.style.left = (rect.left - parentRect.left + offsets.leftOffset) + "px";
 overlay.style.width = rect.width + "px";
 overlay.style.height = rect.height + "px";
 overlay.style.fontSize = f.fontSize + "px";
@@ -381,8 +394,10 @@ overlay.style.whiteSpace = f.multiline ? "pre-wrap" : "nowrap";
 overlay.style.display = "flex";
 overlay.style.alignItems = "center";
 overlay.style.justifyContent = "center";
+
 element.appendChild(overlay);
 overlays.push(overlay);
+
 });
 
 // ===== Generate canvas & PDF =====
