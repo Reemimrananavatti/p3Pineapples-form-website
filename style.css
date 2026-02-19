@@ -5,17 +5,18 @@ body{
 margin:0;
 padding:0;
 font-family: Arial, Helvetica, sans-serif;
-display:block;
 background:#f2f2f2;
 }
 
 .form-wrapper{
 position:relative;
 width:100%;
+max-width: 794px;
 height: 1123px;
 background:#fff;
 margin: 0 auto;
 overflow:hidden;
+padding-bottom:1123px;
 }
 
 .form-bg{
@@ -40,7 +41,7 @@ text-align:center;
 display: flex;
 align-items: center;
 justify-content: center;
-
+z-index: 1;
 }
 
 input.input{
@@ -356,4 +357,5 @@ transform: scale(0.98);
         transform-origin: top left;
     }
 }
+
 
