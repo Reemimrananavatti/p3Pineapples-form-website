@@ -42,7 +42,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 1;
-    border: 1px solid rgba(0,0,0,0.15);
 }
 
 input.input{
@@ -358,6 +357,7 @@ transform: scale(0.98);
         transform-origin: top left;
     }
 }
+
 
 
 
