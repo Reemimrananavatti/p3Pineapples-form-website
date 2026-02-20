@@ -314,9 +314,9 @@ allInputs.forEach(inp => inp.style.background = "transparent");
 
 // ===== Fields configuration =====
 const fields = [
-{selector: "#address", fontSize:18, fontWeight:800, multiline:true},
+{selector: "#address", fontSize:17, fontWeight:800, multiline:true},
 {selector: ".date", fontSize:16, fontWeight:800, isDate:true},
-{selector: ".vehicle", fontSize:18, fontWeight:1000},
+{selector: ".vehicle", fontSize:17, fontWeight:1000},
 {selector: ".brent", fontSize:16, fontWeight:800},
 {selector: ".bguarantee", fontSize:16, fontWeight:800},
 {selector: ".rent", fontSize:16, fontWeight:800, isMoney:true},
@@ -328,7 +328,7 @@ const fields = [
 {selector: ".count", fontSize:16, fontWeight:800},
 {selector: ".total", fontSize:16, fontWeight:800, isMoney:true},
 {selector: ".date1", fontSize:16, fontWeight:800, isDate:true},
-{selector: ".time", fontSize:17, fontWeight:800, isTime:true},
+{selector: ".time", fontSize:16, fontWeight:800, isTime:true},
 {selector: ".day", fontSize:16, fontWeight:800}
 ];
 
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
