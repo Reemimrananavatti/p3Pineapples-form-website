@@ -286,20 +286,20 @@ return parseInt(value,10).toLocaleString("en-IN") + "/-";
 
 // ===== Custom position offsets for fine-tuning each field =====
 const customOffsets = {
-"#address": {topOffset: 5, leftOffset: 10},
+"#address": {topOffset: 6, leftOffset: 10},
 ".vehicle": {topOffset: 0, leftOffset: 0},
 ".date": {topOffset: 0, leftOffset: 0},
 ".brent": {topOffset: 0, leftOffset: 0},
-".bguarantee": {topOffset: 0, leftOffset: 0},
+".bguarantee": {topOffset: -1, leftOffset: 0},
 ".rent": {topOffset: 0, leftOffset: -35},
-".guarantee": {topOffset: 0, leftOffset: 0},
+".guarantee": {topOffset: -1, leftOffset: 0},
 ".advance": {topOffset: 0, leftOffset: 0},
-".amount": {topOffset: 0, leftOffset: 0},
-".tip": {topOffset: 0, leftOffset: 0},
+".amount": {topOffset: -1, leftOffset: 0},
+".tip": {topOffset: 0, leftOffset: 5},
 ".weight": {topOffset: 0, leftOffset: 0},
 ".count": {topOffset: 0, leftOffset: 0},
 ".total": {topOffset: 0, leftOffset: 0},
-".date1": {topOffset: 0, leftOffset: 0},
+".date1": {topOffset: 1, leftOffset: 0},
 ".time": {topOffset: 0, leftOffset: 0},
 ".day": {topOffset: 0, leftOffset: 0}
 };
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
