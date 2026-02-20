@@ -217,3 +217,18 @@ html,body{
   width: 100%;
   overflow-x: hidden;
 }
+
+/* ===== MOBILE CANVAS SCALE FIX ===== */
+@media (max-width: 900px) {
+
+.form-wrapper{
+transform: scale(calc(100vw / 794));
+transform-origin: top left;
+}
+
+body{
+overflow-x:hidden;
+}
+
+}
+
