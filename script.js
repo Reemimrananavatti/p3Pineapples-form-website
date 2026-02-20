@@ -323,7 +323,7 @@ const fields = [
 {selector: ".guarantee", fontSize:16, fontWeight:800, isMoney:true},
 {selector: ".advance", fontSize:16, fontWeight:800, isMoney:true},
 {selector: ".amount", fontSize:16, fontWeight:800, isMoney:true},
-{selector: ".tip", fontSize:14, fontWeight:800, multiline:true},
+{selector: ".tip", fontSize:12, fontWeight:800, multiline:true},
 {selector: ".weight", fontSize:16, fontWeight:800},
 {selector: ".count", fontSize:16, fontWeight:800},
 {selector: ".total", fontSize:16, fontWeight:800, isMoney:true},
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
