@@ -257,3 +257,35 @@ margin:0; /* remove auto margin to prevent shift */
 
 }
 
+
+
+/* ===== TRUE MOBILE FIT ===== */
+@media (max-width: 820px){
+
+html, body{
+width:100%;
+overflow-x:hidden;
+}
+
+.form-wrapper{
+width:100vw; /* fill screen width */
+max-width:none;
+min-height:calc(100vw * 1.41); /* keep A4 ratio */
+margin:0 auto;
+}
+
+/* scale ALL positioned elements proportionally */
+.form-wrapper{
+transform: scale(calc(100vw / 794));
+transform-origin: top left;
+}
+
+/* prevent right side cut */
+body{
+overflow-x:hidden;
+}
+
+}
+
+
+
