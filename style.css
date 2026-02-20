@@ -17,6 +17,8 @@ position:relative;
 width:100%;
 max-width:100%;
 background:#fff;
+box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .form-bg{
@@ -348,6 +350,7 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
 
 
 
