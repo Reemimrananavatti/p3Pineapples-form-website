@@ -353,6 +353,12 @@ transform: scale(0.98);
 }
 
 
+body, .container, .form-wrapper, #formContainer {
+opacity: 1 !important;
+transform: none !important;
+filter: none !important;
+color: #000 !important;
+}
 
 
 
