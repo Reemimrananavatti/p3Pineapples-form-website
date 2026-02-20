@@ -295,11 +295,11 @@ const customOffsets = {
 ".guarantee": {topOffset: 0, leftOffset: 0},
 ".advance": {topOffset: 0, leftOffset: 0},
 ".amount": {topOffset: 0, leftOffset: 0},
-".tip": {topOffset: 0, leftOffset: -35},
+".tip": {topOffset: 0, leftOffset: 0},
 ".weight": {topOffset: 0, leftOffset: 0},
 ".count": {topOffset: 0, leftOffset: 0},
 ".total": {topOffset: 0, leftOffset: 0},
-".date1": {topOffset: 0, leftOffset: -5},
+".date1": {topOffset: 0, leftOffset: 0},
 ".time": {topOffset: 0, leftOffset: 0},
 ".day": {topOffset: 0, leftOffset: 0}
 };
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
