@@ -19,6 +19,7 @@ max-width:794px;
 aspect-ratio:210 / 297;
 background:#fff;
 overflow:hidden;
+    z-index: 1;
 }
 
 .form-bg{
@@ -44,7 +45,7 @@ text-align:center;
 display: flex;
 align-items: center;
 justify-content: center;
-
+z-index: 2;
 }
 
 input.input{
@@ -351,4 +352,5 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
 
