@@ -1,31 +1,26 @@
 
 
-/* ===== BASE ===== */
-*{
-box-sizing:border-box;
-}
 
 body{
 margin:0;
 padding:0;
+box-sizing:border-box;
 font-family: Arial, Helvetica, sans-serif;
+display:flex;
+flex-direction:column;
+align-items:center;
 background:#f2f2f2;
-overflow-x:hidden; /* prevents side crop scroll */
 }
 
-/* ===== MAIN WRAPPER ===== */
 .form-wrapper{
-position: relative;
-width: 794px; /* fixed design width */
-max-width: 100%;
-
-min-height: 1120px;
-margin: 0 auto;
+position:relative;
+width:100%;
+max-width:794px;
+aspect-ratio:210 / 297;
 background:#fff;
-z-index:1;
+overflow:hidden;
 }
 
-/* ===== BACKGROUND ===== */
 .form-bg{
 position:absolute;
 width:100%;
@@ -34,10 +29,8 @@ object-fit:cover;
 top:0;
 left:0;
 z-index:0;
-pointer-events:none;
 }
 
-/* ===== INPUT BASE ===== */
 .input{
 position:absolute;
 border:none;
@@ -47,54 +40,54 @@ font-size:21px;
 font-weight:800;
 color:#000;
 text-align:center;
-z-index:2;
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 
 input.input{
-line-height:1;
-padding-top:4px;
+    line-height: 1;
+    padding-top: 4px;
 }
 
 textarea.input{
+    text-align: left;
+    padding: 6px;
+    display: block;
+}
+
+
+/* Address left aligned + multiline */
+.address{
 text-align:left;
-padding:6px;
-display:block;
 white-space:pre-wrap;
 }
 
-/* ===== ADDRESS ===== */
-.address{
-top:0px;
-left:10px;
-width:520px;
-height:80px;
-text-align:left;
-}
-
-/* ===== POSITIONS ===== */
+/* POSITIONS (unchanged) */
 .vehicle{ top:250px; left:240px; width:300px;}
 .date{ top:260px; left:590px; width:180px;}
 
-.brent{ top:510px; left:0px; width:200px;}
-.bguarantee{ top:560px; left:0px; width:200px;}
+.address{ top:0px; left:10px; width:520px; height:80px;}
+.brent{ top:510px; left:-10px; width:200px;}
+.bguarantee{ top:560px; left:-10px; width:200px;}
 .rent{ top:510px; left:330px; width:200px;}
 .guarantee{ top:560px; left:340px; width:200px;}
 .advance{ top:620px; left:310px; width:200px;}
 .amount{ top:670px; left:310px; width:200px;}
 
-.tip{ top:750px; left:0px; width:100%; height:70px;}
+.tip{ top:750px; left:-10px; width:1020px; height:70px;}
 
 .date1{ top:880px; left:120px; width:160px;}
 .day{ top:930px; left:110px; width:200px;}
-
 .time{ top:980px; left:140px; width:120px;}
 .ampm{ top:980px; left:210px; width:120px;}
+
 
 .weight{ top:830px; left:590px; width:200px;}
 .count{ top:880px; left:590px; width:200px;}
 .total{ top:940px; left:590px; width:200px;}
 
-/* ===== BUTTON ===== */
 .btn{
 margin:20px;
 padding:12px 24px;
@@ -106,7 +99,22 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* ===== ADDRESS DROPDOWN ===== */
+
+/* ===== Address styling ===== */
+#address {
+text-align: center !important;
+font-weight: 1200 !important;
+font-size: 22px !important;
+white-space: pre-wrap !important;
+top: 0px;
+left: -250px;
+}
+
+#addressPreview{
+    white-space: pre-line;
+}
+
+/* ===== Stylish dropdown ===== */
 .address-dropdown {
 position: absolute;
 top: 90px;
@@ -134,7 +142,76 @@ border-bottom: 1px solid #eee;
 background: #f3f6ff;
 }
 
-/* ===== ADDRESS MIRROR ===== */
+
+
+
+
+
+
+button {
+padding: 8px 14px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+
+.address-card {
+border: 1px solid #ddd;
+padding: 12px;
+margin-bottom: 10px;
+border-radius: 8px;
+background: #f9f9f9;
+}
+
+pre {
+white-space: pre-wrap;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+}
+
+
+* Dropdown container */
+.address-dropdown {
+position: absolute;
+width: 100%;
+max-height: 220px;
+overflow-y: auto;
+border-radius: 10px;
+box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+background: #fff;
+z-index: 1000;
+margin-top: 6px;
+}
+
+/* Each address item */
+.address-item {
+padding: 12px 14px;
+cursor: pointer;
+border-bottom: 1px solid #eee;
+transition: background 0.2s ease;
+text-align: center;
+font-weight: 600;
+font-size: 15px;
+white-space: pre-wrap; /* keeps multiple lines */
+}
+
+/* Hover effect */
+.address-item:hover {
+background: #f3f6ff;
+}
+
+/* Last item no border */
+.address-item:last-child {
+border-bottom: none;
+}
+
+
+
+
 .address-mirror{
 position:absolute;
 top:0;
@@ -142,17 +219,21 @@ left:0;
 width:100%;
 height:100%;
 pointer-events:none;
+
 white-space:pre-wrap;
 text-align:center;
 font-weight:700;
 font-size:20px;
 color:#000;
+
 display:flex;
 align-items:center;
 justify-content:center;
 }
 
-/* ===== SAVED ADDRESS BUTTON ===== */
+
+
+/* Saved Addresses Button Only */
 #savedAddressesBtn {
 background-color: #4CAF50;
 color: white;
@@ -161,9 +242,15 @@ padding: 10px 20px;
 border: none;
 border-radius: 8px;
 cursor: pointer;
+transition: background 0.3s, transform 0.2s;
 }
 
-/* ===== ADDRESS LIST ===== */
+#savedAddressesBtn:hover {
+background-color: #45a049;
+transform: scale(1.05);
+}
+
+/* Address List Container */
 #addressList {
 margin-top: 15px;
 display: flex;
@@ -171,6 +258,7 @@ flex-direction: column;
 gap: 12px;
 }
 
+/* Each Address Card */
 #addressList .address-card {
 background-color: #f9f9f9;
 border-left: 5px solid #4CAF50;
@@ -180,8 +268,15 @@ box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 display: flex;
 justify-content: space-between;
 align-items: center;
+transition: transform 0.2s, box-shadow 0.2s;
 }
 
+#addressList .address-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Buttons inside Address Card */
 #addressList .address-card button {
 background-color: #2196F3;
 color: white;
@@ -190,11 +285,49 @@ padding: 6px 12px;
 border-radius: 5px;
 cursor: pointer;
 font-size: 0.85rem;
+margin-left: 5px;
+transition: background 0.2s, transform 0.2s;
 }
 
-/* ===== BACK BUTTON ===== */
+#addressList .address-card button:hover {
+background-color: #1976D2;
+transform: scale(1.05);
+}
+
+/* Address Text Styling */
+#addressList .address-card pre {
+margin: 0;
+font-family: "Segoe UI", sans-serif;
+font-size: 0.95rem;
+color: #333;
+white-space: pre-wrap;
+}
+
+
+
+/* Responsive Form */
+@media (max-width: 600px) {
+.form-wrapper {
+max-width: 100%;
+aspect-ratio: auto;
+}
+.input {
+font-size: 18px; /* adjust if needed */
+}
+.address {
+width: 90% !important;
+}
+.ampm {
+width: 50px !important;
+}
+}
+
+
+
+
+
 #backBtn {
-background-color: #f44336;
+background-color: #f44336; /* red color for “back” */
 color: #fff;
 font-weight: 700;
 padding: 10px 24px;
@@ -202,90 +335,18 @@ border: none;
 border-radius: 8px;
 cursor: pointer;
 font-size: 16px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+transition: background 0.3s ease, transform 0.2s ease;
+display: inline-flex;
+align-items: center;
+gap: 6px; /* space between arrow and text */
 }
 
-/* ================= MOBILE SCALING ================= */
-
-/* scale entire form proportionally instead of cropping */
-@media (max-width: 820px){
-
-.form-wrapper{
-transform: scale(calc(100vw / 794));
-transform-origin: top center;
-height: calc(1120px * (100vw / 794));
+#backBtn:hover {
+background-color: #d32f2f; /* darker red on hover */
+transform: scale(1.05);
 }
 
-body{
-overflow-x:hidden;
+#backBtn:active {
+transform: scale(0.98);
 }
-
-}
-
-/* extra small phones */
-@media (max-width: 480px){
-
-.form-wrapper{
-transform: scale(calc(100vw / 794));
-transform-origin: top center;
-}
-
-.input{
-font-size:18px;
-}
-
-}
-
-
-
-
-/* ===== FINAL iPHONE CENTER FIX ===== */
-@media (max-width: 820px){
-
-body{
-display:flex;
-justify-content:center;
-align-items:flex-start;
-overflow-x:hidden;
-}
-
-.form-wrapper{
-width:794px;
-transform: scale(calc(100vw / 794));
-transform-origin: top center;
-margin:0; /* remove auto margin to prevent shift */
-}
-
-}
-
-
-
-/* ===== TRUE MOBILE FIT ===== */
-@media (max-width: 820px){
-
-html, body{
-width:100%;
-overflow-x:hidden;
-}
-
-.form-wrapper{
-width:100vw; /* fill screen width */
-max-width:none;
-min-height:calc(100vw * 1.41); /* keep A4 ratio */
-margin:0 auto;
-}
-
-/* scale ALL positioned elements proportionally */
-.form-wrapper{
-transform: scale(calc(100vw / 794));
-transform-origin: top left;
-}
-
-/* prevent right side cut */
-body{
-overflow-x:hidden;
-}
-
-}
-
-
-
