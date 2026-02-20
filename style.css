@@ -42,10 +42,10 @@ body {
 
 
 /* Responsive input positions */
-.vehicle   { top: 24%;  left: 30%; width: 35%; }
+.vehicle   { top: 23%;  left: 30%; width: 35%; }
 .date      { top: 23%;  left: 78%; width: 20%; }
 
-.address   { top: 27%; left: 0%;  width: 65%; height: 10%; }
+.address   { top: 29%; left: 0%;  width: 65%; height: 10%; }
 .brent     { top: 45%; left: -2%;  width: 25%; }
 .bguarantee{ top: 50%; left: -2%;  width: 25%; }
 .rent      { top: 45%; left: 40%; width: 25%; }
@@ -54,11 +54,11 @@ body {
 .advance   { top: 55%; left: 40%; width: 25%; }
 .amount    { top: 60%; left: 40%; width: 25%; }
 
-.tip       { top: 65%; left: 4%;  width: 90%; height: 8%; }
+.tip       { top: 65%; left: 8%;  width: 90%; height: 8%; }
 
 .date1     { top: 79%; left: 20%; width: 20%; }
-.day       { top: 83%; left: 15%; width: 25%; }
-.time      { top: 87%; left: 17%; width: 15%; }
+.day       { top: 83%; left: 18%; width: 25%; }
+.time      { top: 87%; left: 24%; width: 15%; }
 .ampm      { top: 87%; left: 35%; width: 10%; }
 
 .weight    { top: 73%; left: 70%; width: 25%; }
@@ -319,4 +319,5 @@ transform: scale(1.05);
 
 #backBtn:active {
 transform: scale(0.98);
+
 }
