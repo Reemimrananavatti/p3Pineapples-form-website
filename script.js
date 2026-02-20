@@ -145,15 +145,6 @@ if (inputs[index + 1]) inputs[index + 1].focus();
 });
 
 
-const mirror = document.getElementById("addressMirror");
-
-function syncAddress(){
-mirror.textContent = addressField.value;
-}
-
-addressField.addEventListener("input", syncAddress);
-addressField.addEventListener("change", syncAddress);
-
 
 
 // Select the "Amount Payable" field and the Download button
@@ -436,6 +427,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
