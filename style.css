@@ -47,18 +47,18 @@ body {
 
 .address   { top: 29%; left: 5%;  width: 65%; height: 10%; }
 .brent     { top: 45%; left: -2%;  width: 25%; }
-.bguarantee{ top: 50%; left: -2%;  width: 25%; }
+.bguarantee{ top: 49%; left: -2%;  width: 25%; }
 .rent      { top: 45%; left: 40%; width: 25%; }
-.guarantee { top: 50%; left: 45%; width: 25%; }
+.guarantee { top: 49%; left: 45%; width: 25%; }
 
 .advance   { top: 55%; left: 40%; width: 25%; }
-.amount    { top: 60%; left: 40%; width: 25%; }
+.amount    { top: 59%; left: 40%; width: 25%; }
 
-.tip       { top: 65%; left: 2%;  width: 90%; height: 8%; }
+.tip       { top: 65%; left: 5%;  width: 90%; height: 8%; }
 
 .date1     { top: 77%; left: 18%; width: 20%; }
-.day       { top: 82%; left: 15%; width: 25%; }
-.time      { top: 86%; left: 21%; width: 15%; }
+.day       { top: 83%; left: 15%; width: 25%; }
+.time      { top: 87%; left: 21%; width: 15%; }
 .ampm      { top: 87%; left: 35%; width: 10%; }
 
 .weight    { top: 73%; left: 70%; width: 25%; }
@@ -319,10 +319,4 @@ transform: scale(1.05);
 
 #backBtn:active {
 transform: scale(0.98);
-
 }
-
-
-
-
-
