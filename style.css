@@ -29,6 +29,7 @@ object-fit:cover;
 top:0;
 left:0;
 z-index:0;
+    pointer-events: none;
 }
 
 .input{
@@ -350,3 +351,4 @@ transform: scale(1.05);
 #backBtn:active {
 transform: scale(0.98);
 }
+
