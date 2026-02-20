@@ -286,8 +286,8 @@ return parseInt(value,10).toLocaleString("en-IN") + "/-";
 
 // ===== Custom position offsets for fine-tuning each field =====
 const customOffsets = {
-"#address": {topOffset: 15, leftOffset: 40},
-".vehicle": {topOffset: 10, leftOffset: 0},
+"#address": {topOffset: 10, leftOffset: 25},
+".vehicle": {topOffset: 0, leftOffset: 0},
 ".date": {topOffset: 0, leftOffset: -20},
 ".brent": {topOffset: 0, leftOffset: 0},
 ".bguarantee": {topOffset: 0, leftOffset: 0},
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
