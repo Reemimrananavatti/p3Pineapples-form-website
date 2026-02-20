@@ -286,7 +286,7 @@ return parseInt(value,10).toLocaleString("en-IN") + "/-";
 
 // ===== Custom position offsets for fine-tuning each field =====
 const customOffsets = {
-"#address": {topOffset: 10, leftOffset: 25},
+"#address": {topOffset: 0, leftOffset: 0},
 ".vehicle": {topOffset: 0, leftOffset: 0},
 ".date": {topOffset: 0, leftOffset: -20},
 ".brent": {topOffset: 0, leftOffset: 0},
@@ -295,13 +295,13 @@ const customOffsets = {
 ".guarantee": {topOffset: 0, leftOffset: 0},
 ".advance": {topOffset: 0, leftOffset: 0},
 ".amount": {topOffset: 0, leftOffset: 0},
-".tip": {topOffset: -5, leftOffset: 80},
+".tip": {topOffset: 0, leftOffset: 80},
 ".weight": {topOffset: 0, leftOffset: 0},
 ".count": {topOffset: 0, leftOffset: 0},
 ".total": {topOffset: 0, leftOffset: 0},
 ".date1": {topOffset: 0, leftOffset: -9},
-".time": {topOffset: 0, leftOffset: 20},
-".day": {topOffset: 0, leftOffset: -15}
+".time": {topOffset: 0, leftOffset: 0},
+".day": {topOffset: 0, leftOffset: 0}
 };
 
 
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
