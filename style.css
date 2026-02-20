@@ -210,3 +210,10 @@ font-size:18px;
 }
 
 }
+
+
+
+html,body{
+  width: 100%;
+  overflow-x: hidden;
+}
