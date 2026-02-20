@@ -218,17 +218,26 @@ html,body{
   overflow-x: hidden;
 }
 
-/* ===== MOBILE CANVAS SCALE FIX ===== */
-@media (max-width: 900px) {
-
-.form-wrapper{
-transform: scale(calc(100vw / 794));
-transform-origin: top left;
-}
+/* ===== MOBILE PERFECT SCALE (PDF SAFE) ===== */
+@media (max-width: 900px){
 
 body{
 overflow-x:hidden;
 }
 
+.form-wrapper{
+width:794px; /* keep original PDF width */
+transform: scale(calc(100vw / 794));
+transform-origin: top left;
+margin-left:0;
 }
+
+.btn{
+
+transform: scale(calc(100vw / 794));
+transform-origin: top left;
+}
+
+}
+
 
