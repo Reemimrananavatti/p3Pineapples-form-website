@@ -45,7 +45,7 @@ body {
 .vehicle   { top: 22%;  left: 30%; width: 35%; }
 .date      { top: 23%;  left: 77%; width: 20%; }
 
-.address   { top: 30%; left: 8%;  width: 65%; height: 10%; }
+.address   { top: 28%; left: 8%;  width: 65%; height: 10%; }
 .brent     { top: 45%; left: -2%;  width: 25%; }
 .bguarantee{ top: 50%; left: -2%;  width: 25%; }
 .rent      { top: 45%; left: 40%; width: 25%; }
@@ -54,7 +54,7 @@ body {
 .advance   { top: 55%; left: 40%; width: 25%; }
 .amount    { top: 60%; left: 40%; width: 25%; }
 
-.tip       { top: 65%; left: 15%;  width: 90%; height: 8%; }
+.tip       { top: 65%; left: 0%;  width: 90%; height: 8%; }
 
 .date1     { top: 79%; left: 18%; width: 20%; }
 .day       { top: 82%; left: 15%; width: 25%; }
@@ -321,3 +321,4 @@ transform: scale(1.05);
 transform: scale(0.98);
 
 }
+
