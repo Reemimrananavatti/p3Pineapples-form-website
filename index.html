@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pine Agri Form</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="form-wrapper" id="formArea">
+    <img src="form-bg.jpg" class="form-bg">
+
+    <input type="text" placeholder="Vehicle number" class="input vehicle">
+    <input type="date" class="input date">
+
+    <!-- Address -->
+    <textarea id="address" placeholder="Enter address" class="input address"></textarea>
+    <div id="addressDropdown" class="address-dropdown"></div>
+
+    <input type="text" placeholder="T R" class="input brent">
+    <input type="text" placeholder="T G" class="input bguarantee">
+    <input type="text" placeholder="Rent" class="input rent">
+    <input type="text" placeholder="Guarantee" class="input guarantee">
+    <input type="text" placeholder="Advance" class="input advance">
+    <input type="text" placeholder="Amount payable" class="input amount">
+
+    <input type="text" placeholder="Tip" class="input tip">
+
+    <input type="date" class="input date1">
+    <input type="text" placeholder="Day" class="input day">
+    <input type="time" class="input time">
+   
+
+    <input type="text" placeholder="Net weight" class="input weight">
+    <input type="text" placeholder="Total count" class="input count">
+    <input type="text" placeholder="Total payable" class="input total">
+  </div>
+
+  <button onclick="downloadPDF()" class="btn">Download PDF</button>
+
+  <div id="addressManager">
+    <button id="savedAddressesBtn" onclick="goToSavedAddresses()">Saved Addresses</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
