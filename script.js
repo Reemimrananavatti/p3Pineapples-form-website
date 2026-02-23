@@ -189,7 +189,7 @@ dayField.value = days[selectedDate.getDay()];
 
 
 function formatDate(dateInput){
-if(!dateInput) return "";
+if(!dateInput) return "5:00 AM";
 const date = new Date(dateInput);
 const day = String(date.getDate()).padStart(2,"0");
 const month = String(date.getMonth()+1).padStart(2,"0");
@@ -447,7 +447,7 @@ let vehicleNumber = vehicleNumberField ? vehicleNumberField.value.trim() : "Pine
 vehicleNumber = vehicleNumber.replace(/[^a-zA-Z0-9_-]/g, "_");
 
 // Save PDF with vehicle number as filename
-pdf.save(vehicleNumber + "_P3pineapple.pdf");
+pdf.save(vehicleNumber + "_P3pineappleImranAnavatti.pdf");
 
 // ===== Cleanup overlays =====
 overlays.forEach(o => element.removeChild(o));
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
