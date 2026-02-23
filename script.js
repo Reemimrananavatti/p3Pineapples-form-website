@@ -203,7 +203,7 @@ function getTimeWithAMPM(){
 const timeInput = document.querySelector(".time").value; // "14:05"
 const ampm = document.getElementById("ampm").value || "AM";
 
-if(!timeInput) return "";
+if(!timeInput) return "5:00 AM";
 
 let [hour, minutes] = timeInput.split(":");
 hour = parseInt(hour);
@@ -462,6 +462,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
