@@ -189,7 +189,7 @@ dayField.value = days[selectedDate.getDay()];
 
 
 function formatDate(dateInput){
-if(!dateInput) return "5:00 AM";
+if(!dateInput) return " ";
 const date = new Date(dateInput);
 const day = String(date.getDate()).padStart(2,"0");
 const month = String(date.getMonth()+1).padStart(2,"0");
@@ -204,12 +204,13 @@ const timeInput = document.querySelector(".time").value; // "14:05"
 const ampm = document.getElementById("ampm").value || "AM";
 
 if(!timeInput) return "5:00 AM";
-
+else{
 let [hour, minutes] = timeInput.split(":");
 hour = parseInt(hour);
 
 let displayHour = hour % 12 || 12; // converts 24h to 12h
 return `${displayHour}:${minutes} ${ampm}`; // e.g., "02:05 PM"
+}
 }
 
 
@@ -462,6 +463,7 @@ allInputs.forEach(inp => inp.style.background = "");
 function goToSavedAddresses() {
 window.location.href = "saved-addresses.html";
 }
+
 
 
 
